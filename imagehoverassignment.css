@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    background:aquamarine;
+}
+
+h1{
+    margin:20px;
+}
+
+.gallery{
+    display:grid;/*this is the container that has all your images and activates your CSS layouts*/
+    grid-template-columns: repeat(3, 1fr);/*Arranges everything inside this box in a grid, like a table with rows and columns*/
+    gap:15px;/*space between the images*/
+    max-width:900px;/*This means the gallery will not stretch longer than 900 pixels.*/
+    margin:auto;/*This centers the whole gallery in the middle of the page*/
+}
+
+.card{
+    overflow:hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) ;/*This adds a subtle shadow around the card*/
+
+}
+
+.card img{
+width:100%;
+display:block;
+transition: all 0.4 ease;
+}
+
+/*Hover Effects*/
+.card:nth-child(1):hover img{
+ transform: scale(1.2);/*Zoom in effect*/
+}
+
+.card:nth-child(2):hover img{
+    transform: rotate(10deg) scale(1.1)/*Rotate and zoom effect*/
+   }
+
+   .card:nth-child(3):hover img{
+    filter:grayscale(100%);/*Black and white effect*/
+   }
+
+   .card:nth-child(4):hover img{
+    filter:blur(3px);/*Blur effect*/
+   }
+
+   .card:nth-child(5):hover img{
+    filter:brightness(1.5);/*Brightness effect*/
+   }
+
+   .card:nth-child(6):hover img{
+    transform: translateY(-10px);/*Lift up effect*/
+   }
